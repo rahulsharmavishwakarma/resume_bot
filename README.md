@@ -2,7 +2,30 @@
 
 ## Project Description
 
-The Resume Retrieval and Question-Answering System is an advanced application designed to streamline the hiring process by efficiently retrieving relevant resumes and providing insightful answers based on their content. The project integrates various technologies, including a vector database, machine learning models for natural language processing, and a user-friendly web interface.
+The Resume Retrieval and Question-Answering System is an advanced application designed to streamline the hiring process through efficient resume retrieval and intelligent question answering. The system leverages the following key technologies:
+
+
+1. Vector Database: Milvus
+   - Used for storing and retrieving resume embeddings
+   - Supports both sparse and dense vector representations
+   - Enables hybrid search capabilities
+
+2. Embedding Generation: BGEM3EmbeddingFunction
+   - Generates both sparse and dense embeddings for resume content
+   - Supports CPU and GPU acceleration
+
+3. Large Language Model: Mistral AI's Mixtral-8x7B-Instruct-v0.1
+   - Utilized for generating human-like responses to queries based on retrieved resume contexts
+
+4. Natural Language Processing Libraries:
+   - PyMilvus for interacting with the Milvus database
+   - Hugging Face's InferenceClient for interfacing with the large language model
+
+5. Development Environment:
+   - Python-based implementation
+   - Supports both CPU and GPU processing
+
+This tech stack combines the power of vector databases for efficient semantic search with advanced language models for intelligent query processing, creating a robust system for resume analysis and candidate matching.
 
 ### Key Components
 
@@ -15,11 +38,15 @@ The Resume Retrieval and Question-Answering System is an advanced application de
    - The `vector_db.py` module is responsible for setting up and managing a Milvus vector database, which is optimized for storing and retrieving high-dimensional data like embeddings.
    - It creates collections, defines schemas for the resume data (including fields for dense and sparse vectors), and inserts processed resume data into the database.
    - This architecture allows for hybrid search capabilities, combining both dense and sparse vectors to enhance retrieval accuracy.
+   - Employs BGEM3EmbeddingFunction for generating embeddings.
+   - Utilizes Milvus for efficient vector storage and retrieval.
 
 3. **Search and Retrieval Pipeline**:
    - The `pipeline.py` file serves as the core of the retrieval mechanism. It includes methods for performing dense, sparse, and hybrid searches against the Milvus database.
    - The system intelligently ranks the results based on semantic similarity, ensuring that users receive the most relevant resumes in response to their queries.
    - It also includes functionality to generate embeddings for user queries, allowing for natural language searches that yield meaningful results.
+   - Utilizes a large language model (Mixtral-8x7B) for generating answers based on retrieved contexts.
+   - Uses both sparse and dense vector search capabilities of Milvus.
 
 4. **User Interface**:
    - The application is presented through a web interface built with Gradio (`app.py`), offering a chat-like experience for users to input queries and view results.
