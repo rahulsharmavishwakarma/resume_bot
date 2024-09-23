@@ -5,23 +5,23 @@
 The Resume Retrieval and Question-Answering System is an advanced application designed to streamline the hiring process through efficient resume retrieval and intelligent question answering. The system leverages the following key technologies:
 
 
-1. Vector Database: Milvus
+1. **Vector Database: Milvus**:
    - Used for storing and retrieving resume embeddings
    - Supports both sparse and dense vector representations
    - Enables hybrid search capabilities
 
-2. Embedding Generation: BGEM3EmbeddingFunction
+2. **Embedding Generation: BGEM3EmbeddingFunction**:
    - Generates both sparse and dense embeddings for resume content
    - Supports CPU and GPU acceleration
 
-3. Large Language Model: Mistral AI's Mixtral-8x7B-Instruct-v0.1
+3. **Large Language Model: Mistral AI's Mixtral-8x7B-Instruct-v0.1**:
    - Utilized for generating human-like responses to queries based on retrieved resume contexts
 
-4. Natural Language Processing Libraries:
+4. **Natural Language Processing Libraries**:
    - PyMilvus for interacting with the Milvus database
    - Hugging Face's InferenceClient for interfacing with the large language model
 
-5. Development Environment:
+5. **Development Environment**:
    - Python-based implementation
    - Supports both CPU and GPU processing
 
