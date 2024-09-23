@@ -77,16 +77,19 @@ cd <repository-directory>
 ### Step 2: Set Up the Python Environment
 
 1. **Create a Virtual Environment** (optional but recommended):
+
    ```bash
    python -m venv venv
    ```
 
 2. **Activate the Virtual Environment**:
    - On Windows:
+
      ```bash
      venv\Scripts\activate
      ```
    - On macOS/Linux:
+
      ```bash
      source venv/bin/activate
      ```
@@ -103,6 +106,7 @@ pip install -r requirements.txt
 
 1. **Organize Your PDF Resumes**:
    - Place your PDF resumes into a directory structure, categorized by profession. For example:
+
      ```
      /data/
          /software_engineer/
@@ -115,6 +119,7 @@ pip install -r requirements.txt
 
 2. **Run the Preprocessing Script**:
    - Execute the `preprocess.py` script to extract and structure resume data:
+
      ```bash
      python preprocess.py
      ```
@@ -124,6 +129,7 @@ pip install -r requirements.txt
 
 1. **Run the Vector Database Script**:
    - Execute the `vector_db.py` script to set up the Milvus vector database and insert the processed resume data:
+
      ```bash
      python vector_db.py
      ```
@@ -133,6 +139,7 @@ pip install -r requirements.txt
 
 1. **Run the Pipeline Script** (optional):
    - If needed, test the pipeline functionality using `pipeline.py` to ensure the search mechanisms work correctly:
+
      ```bash
      python pipeline.py
      ```
@@ -141,6 +148,7 @@ pip install -r requirements.txt
 
 1. **Run the Gradio App**:
    - Finally, execute the `app.py` script to start the web interface:
+
      ```bash
      python app.py
      ```
