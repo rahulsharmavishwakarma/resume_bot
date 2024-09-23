@@ -90,11 +90,11 @@ def search_resumes(query, search_type, sparse_weight=0.7, dense_weight=1.0, limi
     
     # Perform search based on the selected method
     if search_type == "Hybrid Search":
-        results = hybrid_search(col, query_embeddings["dense"][0], query_embeddings["sparse"][0], sparse_weight, dense_weight, limit)
+        results = hybrid_search(col, query_embeddings["dense"][0], query_embeddings["sparse"][[0]], sparse_weight, dense_weight, limit)
     elif search_type == "Dense Search":
         results = dense_search(col, query_embeddings["dense"][0], limit)
     else:
-        results = sparse_search(col, query_embeddings["sparse"][0], limit)
+        results = sparse_search(col, query_embeddings["sparse"][[0]], limit)
     
     # Format retrieved results for display
     retrieved = [[res[0], res[1]] for res in results]
