@@ -1,0 +1,8 @@
+gradio
+pymilvus
+sentence-transformers
+PyPDF2
+tqdm
+huggingface-hub
+torch
+transformers
