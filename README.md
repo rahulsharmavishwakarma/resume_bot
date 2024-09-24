@@ -70,8 +70,8 @@ The Resume Retrieval and Question-Answering System enhances the recruitment proc
 First, clone the repository containing the project files to your local machine:
 
 ```bash
-git clone <repository-url>
-cd <repository-directory>
+git clone https://github.com/rahulsharmavishwakarma/resume_bot>
+cd resume_bot
 ```
 
 ### Step 2: Set Up the Python Environment
