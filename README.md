@@ -70,7 +70,7 @@ The Resume Retrieval and Question-Answering System enhances the recruitment proc
 First, clone the repository containing the project files to your local machine:
 
 ```bash
-git clone https://github.com/rahulsharmavishwakarma/resume_bot>
+git clone https://github.com/rahulsharmavishwakarma/resume_bot
 cd resume_bot
 ```
 
